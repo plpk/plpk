@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @plpk
-- 👀 I’m interested in App Development.
+- 👀 I’m interested in App Development, mostly Flutter.
 - 🌱 I’m currently learning Flutter.
 - 💞️ I’m looking to collaborate on learning.
 - 📫 How to reach me https://www.linkedin.com/in/plpk/
