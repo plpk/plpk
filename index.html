@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis Kunasek — AI Integration & Context Engineering</title>
-    <meta name="description" content="Louis Kunasek — Operations leader turned AI builder. Context engineering, QA automation, AI governance. US Army combat veteran. San Juan, PR.">
+    <title>Louis Kunasek | AI Integration & Context Engineering</title>
+    <meta name="description" content="Louis Kunasek | Operations leader pivoting to AI. Context engineering, QA automation, AI governance. US Army combat veteran. San Juan, PR.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -22,413 +22,62 @@
             --serif: 'DM Serif Display', Georgia, serif;
             --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: var(--sans);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ---- NAV ---- */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: 1.25rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(12, 11, 10, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-name {
-            font-family: var(--serif);
-            font-size: 1.15rem;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: 0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            transition: color 0.2s;
-        }
-
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(12, 11, 10, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+        .nav-name { font-family: var(--serif); font-size: 1.15rem; color: var(--text); text-decoration: none; letter-spacing: 0.02em; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
         .nav-links a:hover { color: var(--accent); }
-
-        /* ---- HERO ---- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 8rem 2rem 6rem;
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .hero-location {
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeUp 0.6s ease forwards 0.2s;
-        }
-
-        .hero h1 {
-            font-family: var(--serif);
-            font-size: clamp(2.8rem, 7vw, 4.5rem);
-            line-height: 1.1;
-            color: var(--text);
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeUp 0.6s ease forwards 0.4s;
-        }
-
-        .hero-sub {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            line-height: 1.8;
-            opacity: 0;
-            animation: fadeUp 0.6s ease forwards 0.6s;
-        }
-
-        .hero-links {
-            display: flex;
-            gap: 1.25rem;
-            margin-top: 2.5rem;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeUp 0.6s ease forwards 0.8s;
-        }
-
-        .hero-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.65rem 1.4rem;
-            border: 1px solid var(--accent-border);
-            border-radius: 4px;
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-            transition: background 0.2s, border-color 0.2s;
-        }
-
-        .hero-links a:hover {
-            background: var(--accent-dim);
-            border-color: var(--accent);
-        }
-
-        .hero-links a.primary {
-            background: var(--accent);
-            color: var(--bg);
-            border-color: var(--accent);
-        }
-
-        .hero-links a.primary:hover {
-            background: #d9a44e;
-        }
-
-        /* ---- SECTIONS ---- */
-        section {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 1.75rem;
-        }
-
-        section h2 {
-            font-family: var(--serif);
-            font-size: clamp(1.8rem, 4vw, 2.4rem);
-            line-height: 1.25;
-            margin-bottom: 1.5rem;
-        }
-
-        section p {
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            max-width: 640px;
-        }
-
-        .divider {
-            width: 100%;
-            max-width: 860px;
-            margin: 0 auto;
-            height: 1px;
-            background: var(--border);
-        }
-
-        /* ---- PROJECTS ---- */
-        .projects-grid {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 2rem;
-            transition: background 0.25s, border-color 0.25s;
-        }
-
-        .project-card:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--accent-border);
-        }
-
-        .project-tag {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent);
-            background: var(--accent-dim);
-            padding: 0.25rem 0.65rem;
-            border-radius: 3px;
-            margin-bottom: 1rem;
-        }
-
-        .project-card h3 {
-            font-family: var(--serif);
-            font-size: 1.35rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .project-card p {
-            font-size: 0.925rem;
-            line-height: 1.75;
-        }
-
-        .project-meta {
-            margin-top: 1.25rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .project-meta span {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            background: rgba(232, 228, 223, 0.05);
-            padding: 0.25rem 0.6rem;
-            border-radius: 3px;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            margin-top: 1.25rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2rem 6rem; max-width: 860px; margin: 0 auto; }
+        .hero-location { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.6s ease forwards 0.2s; }
+        .hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 7vw, 4.5rem); line-height: 1.1; color: var(--text); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.6s ease forwards 0.4s; }
+        .hero-sub { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; line-height: 1.8; opacity: 0; animation: fadeUp 0.6s ease forwards 0.6s; }
+        .hero-links { display: flex; gap: 1.25rem; margin-top: 2.5rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.6s ease forwards 0.8s; }
+        .hero-links a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; border: 1px solid var(--accent-border); border-radius: 4px; color: var(--accent); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: background 0.2s, border-color 0.2s; }
+        .hero-links a:hover { background: var(--accent-dim); border-color: var(--accent); }
+        .hero-links a.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+        .hero-links a.primary:hover { background: #d9a44e; }
+        section { max-width: 860px; margin: 0 auto; padding: 5rem 2rem; }
+        .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.75rem; }
+        section h2 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.25; margin-bottom: 1.5rem; }
+        section p { color: var(--text-muted); margin-bottom: 1rem; max-width: 640px; }
+        .divider { width: 100%; max-width: 860px; margin: 0 auto; height: 1px; background: var(--border); }
+        .projects-grid { display: grid; gap: 1.5rem; margin-top: 1rem; }
+        .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; transition: background 0.25s, border-color 0.25s; }
+        .project-card:hover { background: var(--bg-card-hover); border-color: var(--accent-border); }
+        .project-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); background: var(--accent-dim); padding: 0.25rem 0.65rem; border-radius: 3px; margin-bottom: 1rem; }
+        .project-card h3 { font-family: var(--serif); font-size: 1.35rem; margin-bottom: 0.75rem; }
+        .project-card p { font-size: 0.925rem; line-height: 1.75; }
+        .project-meta { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .project-meta span { font-size: 0.75rem; color: var(--text-muted); background: rgba(232, 228, 223, 0.05); padding: 0.25rem 0.6rem; border-radius: 3px; }
+        .project-link { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 1.25rem; color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
         .project-link:hover { text-decoration: underline; }
-
-        /* ---- EXPERIENCE ---- */
-        .exp-list {
-            display: grid;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .exp-item {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 1.5rem;
-            align-items: start;
-        }
-
-        .exp-date {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            padding-top: 0.25rem;
-            font-weight: 500;
-        }
-
-        .exp-content h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 0.2rem;
-        }
-
-        .exp-content .exp-org {
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .exp-content p {
-            font-size: 0.9rem;
-        }
-
-        /* ---- STATS ---- */
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 1.75rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-        }
-
-        .stat-number {
-            font-family: var(--serif);
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 0.3rem;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            letter-spacing: 0.04em;
-        }
-
-        /* ---- MILITARY ---- */
-        .awards-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .award {
-            font-size: 0.8rem;
-            color: var(--text);
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            padding: 0.35rem 0.75rem;
-            border-radius: 4px;
-        }
-
-        /* ---- CONTACT ---- */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-item {
-            padding: 1.25rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-        }
-
-        .contact-item .label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 0.4rem;
-        }
-
-        .contact-item a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
+        .exp-list { display: grid; gap: 2rem; margin-top: 1rem; }
+        .exp-item { display: grid; grid-template-columns: 140px 1fr; gap: 1.5rem; align-items: start; }
+        .exp-date { font-size: 0.8rem; color: var(--text-muted); padding-top: 0.25rem; font-weight: 500; }
+        .exp-content h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.2rem; }
+        .exp-content .exp-org { color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .exp-content p { font-size: 0.9rem; }
+        .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .stat { text-align: center; padding: 1.75rem 1rem; border: 1px solid var(--border); border-radius: 8px; }
+        .stat-number { font-family: var(--serif); font-size: 2rem; color: var(--accent); margin-bottom: 0.3rem; }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.04em; }
+        .awards-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .award { font-size: 0.8rem; color: var(--text); background: var(--bg-card); border: 1px solid var(--border); padding: 0.35rem 0.75rem; border-radius: 4px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .contact-item { padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; }
+        .contact-item .label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; }
+        .contact-item a { color: var(--text); text-decoration: none; font-size: 0.95rem; }
         .contact-item a:hover { color: var(--accent); }
-
-        /* ---- FOOTER ---- */
-        footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            border-top: 1px solid var(--border);
-        }
-
-        /* ---- ANIMATIONS ---- */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ---- RESPONSIVE ---- */
-        @media (max-width: 680px) {
-            nav { padding: 1rem 1.25rem; }
-
-            .nav-links { gap: 1rem; }
-            .nav-links a { font-size: 0.75rem; }
-
-            .hero { padding: 7rem 1.25rem 4rem; }
-
-            section { padding: 3.5rem 1.25rem; }
-
-            .exp-item {
-                grid-template-columns: 1fr;
-                gap: 0.25rem;
-            }
-
-            .stats-row {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .hero-links { flex-direction: column; }
-            .hero-links a { text-align: center; justify-content: center; }
-        }
-
-        @media (max-width: 420px) {
-            .stats-row { grid-template-columns: 1fr; }
-        }
+        footer { text-align: center; padding: 3rem 2rem; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 680px) { nav { padding: 1rem 1.25rem; } .nav-links { gap: 1rem; } .nav-links a { font-size: 0.75rem; } .hero { padding: 7rem 1.25rem 4rem; } section { padding: 3.5rem 1.25rem; } .exp-item { grid-template-columns: 1fr; gap: 0.25rem; } .stats-row { grid-template-columns: repeat(2, 1fr); } .hero-links { flex-direction: column; } .hero-links a { text-align: center; justify-content: center; } }
+        @media (max-width: 420px) { .stats-row { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-
 <nav>
     <a href="#" class="nav-name">Louis Kunasek</a>
     <ul class="nav-links">
@@ -437,14 +86,10 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
-
-<!-- HERO -->
 <div class="hero">
-    <div class="hero-location">San Juan, PR &nbsp;·&nbsp; Remote &nbsp;·&nbsp; Available for Travel</div>
+    <div class="hero-location">San Juan, PR &nbsp;&middot;&nbsp; Remote &nbsp;&middot;&nbsp; Available for Travel</div>
     <h1>AI Integration &amp;<br>Context Engineering</h1>
-    <p class="hero-sub">
-        Operations leader with 15+ years across military operations, state emergency management, regulatory compliance, and enterprise technology — now building AI-powered products and systems. US Army combat veteran. Bilingual English&nbsp;/&nbsp;Spanish.
-    </p>
+    <p class="hero-sub">Operations leader with 15+ years across military operations, state emergency management, regulatory compliance, and enterprise technology. Focused on AI integration, context engineering, and AI governance. US Army combat veteran. Bilingual English&nbsp;/&nbsp;Spanish.</p>
     <div class="hero-links">
         <a href="mailto:Louis.Kunasek@outlook.com" class="primary">Get in Touch</a>
         <a href="https://github.com/plpk" target="_blank" rel="noopener">GitHub</a>
@@ -452,256 +97,95 @@
         <a href="https://apps.apple.com/us/app/purese/id6744907444" target="_blank" rel="noopener">App Store</a>
     </div>
 </div>
-
 <div class="divider"></div>
-
-<!-- ABOUT -->
 <section id="about">
     <div class="section-label">About</div>
-    <h2>The gap between what AI can do and what organizations can implement safely — that's&nbsp;where&nbsp;I&nbsp;work.</h2>
-    <p>
-        I published an AI-powered iOS app to the Apple App Store. I built automated end-to-end test suites with Microsoft Playwright against a production website. And I designed a context engineering system — voice architecture, hook taxonomy, ethical guardrails, multi-tool AI pipeline — that achieved double the industry average engagement rate from a cold start.
-    </p>
-    <p>
-        My background in regulatory compliance (NEPA, ESA, CWA, NHPA), QA/QC program development, and multi-stakeholder coordination maps directly to the AI governance and integration challenges organizations face today. Currently deepening Python, agent architectures (LangChain/LangGraph), and AI evaluation methodologies.
-    </p>
-
+    <h2>Where AI capability meets organizational&nbsp;readiness.</h2>
+    <p>I published an AI-powered iOS app to the Apple App Store using Google's Gemini API and AI-assisted development. I set up automated end-to-end test suites with Microsoft Playwright against a production website. And I designed a context engineering system for AI-driven content production: voice architecture, hook taxonomy, ethical guardrails, and a multi-tool AI pipeline. That system achieved double the industry average engagement rate from a cold start.</p>
+    <p>My background in regulatory compliance (NEPA, ESA, CWA, NHPA), QA/QC program development, and multi-stakeholder coordination maps directly to the AI governance and integration challenges organizations face today. Currently deepening Python, agent architectures (LangChain/LangGraph), and AI evaluation methodologies.</p>
     <div class="stats-row">
-        <div class="stat">
-            <div class="stat-number">15+</div>
-            <div class="stat-label">Years Operational Leadership</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">$21M</div>
-            <div class="stat-label">Federal Compliance Program</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">8</div>
-            <div class="stat-label">Countries — Archival Research</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">2x</div>
-            <div class="stat-label">Industry Avg. Engagement</div>
-        </div>
+        <div class="stat"><div class="stat-number">15+</div><div class="stat-label">Years Operational Leadership</div></div>
+        <div class="stat"><div class="stat-number">$21M</div><div class="stat-label">Federal Compliance Program</div></div>
+        <div class="stat"><div class="stat-number">8</div><div class="stat-label">Countries, Archival Research</div></div>
+        <div class="stat"><div class="stat-number">2x</div><div class="stat-label">Industry Avg. Engagement</div></div>
     </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- PROJECTS -->
 <section id="projects">
     <div class="section-label">Technical Projects</div>
     <h2>Shipped products, real systems, live&nbsp;data.</h2>
-
     <div class="projects-grid">
-
         <div class="project-card">
             <div class="project-tag">Context Engineering</div>
-            <h3>TierCheckMedia — AI Content Production System</h3>
-            <p>
-                Designed a context engineering system for AI-driven short-form video production. Full informational architecture: voice design rules, 8 classified hook archetypes with structural formulas, anti-AI-detection constraints, time-coded script generation, TTS-ready voiceover blocks, ethical guardrails, and multi-tool AI pipeline integrating a custom GPT, ElevenLabs voice clone, and AI-generated music.
-            </p>
-            <p style="color: var(--text); font-weight: 500; margin-top: 0.5rem;">
-                Results in first 15 days: 80,000+ views, 6,700+ likes, 8.4% engagement rate.
-            </p>
-            <div class="project-meta">
-                <span>Custom GPT</span>
-                <span>ElevenLabs</span>
-                <span>Voice Design</span>
-                <span>Ethical AI</span>
-            </div>
+            <h3>TierCheckMedia: AI Content Production System</h3>
+            <p>Designed a context engineering system for AI-driven short-form video production. Full informational architecture: voice design rules, 8 classified hook archetypes with structural formulas, anti-AI-detection constraints, time-coded script generation, TTS-ready voiceover blocks, ethical guardrails, and multi-tool AI pipeline integrating a custom GPT, ElevenLabs voice clone, and AI-generated music.</p>
+            <p style="color: var(--text); font-weight: 500; margin-top: 0.5rem;">Results in first 15 days: 80,000+ views, 6,700+ likes, 8.4% engagement rate.</p>
+            <div class="project-meta"><span>Custom GPT</span><span>ElevenLabs</span><span>Voice Design</span><span>Ethical AI</span></div>
         </div>
-
         <div class="project-card">
             <div class="project-tag">Published App</div>
-            <h3>Purese — AI-Powered Weather App</h3>
-            <p>
-                Minimalist weather app integrating Google Gemini Nano API for AI-generated weather recommendations. Privacy-first architecture with zero personal data collection. Built with Flutter and shipped independently to the Apple App Store.
-            </p>
-            <div class="project-meta">
-                <span>Flutter</span>
-                <span>Google Gemini API</span>
-                <span>iOS</span>
-                <span>App Store</span>
-            </div>
-            <a class="project-link" href="https://apps.apple.com/us/app/purese/id6744907444" target="_blank" rel="noopener">
-                View on App Store →
-            </a>
+            <h3>Purese: AI-Powered Weather App</h3>
+            <p>Minimalist weather app integrating Google Gemini Nano API for AI-generated weather recommendations. Privacy-first architecture with zero personal data collection. Developed using Flutter with AI-assisted development and shipped to the Apple App Store.</p>
+            <div class="project-meta"><span>Google Gemini API</span><span>AI-Assisted Development</span><span>iOS</span><span>App Store</span></div>
+            <a class="project-link" href="https://apps.apple.com/us/app/purese/id6744907444" target="_blank" rel="noopener">View on App Store &rarr;</a>
         </div>
-
         <div class="project-card">
             <div class="project-tag">QA Automation</div>
             <h3>Playwright End-to-End Test Suite</h3>
-            <p>
-                Automated end-to-end test suite built with Microsoft Playwright for a production website with a 20+ year active user base. Real-world QA automation against live systems with real users and real data.
-            </p>
-            <div class="project-meta">
-                <span>Microsoft Playwright</span>
-                <span>TypeScript</span>
-                <span>E2E Testing</span>
-            </div>
-            <a class="project-link" href="https://github.com/plpk" target="_blank" rel="noopener">
-                View on GitHub →
-            </a>
+            <p>Automated end-to-end test suite set up with Microsoft Playwright for a production website with a 20+ year active user base. Real-world QA automation against live systems with real users and real data.</p>
+            <div class="project-meta"><span>Microsoft Playwright</span><span>TypeScript</span><span>E2E Testing</span></div>
+            <a class="project-link" href="https://github.com/plpk" target="_blank" rel="noopener">View on GitHub &rarr;</a>
         </div>
-
         <div class="project-card">
             <div class="project-tag">In Progress</div>
             <h3>FFXI Crafting Profit Calculator</h3>
-            <p>
-                Python learning project scraping live auction house data from a production MMORPG site. Building with BeautifulSoup, nested data structures, functions, and file I/O. Structured fundamentals-first approach — learning by solving a real problem with real data.
-            </p>
-            <div class="project-meta">
-                <span>Python</span>
-                <span>BeautifulSoup</span>
-                <span>Web Scraping</span>
-            </div>
+            <p>Python learning project scraping live auction house data from a production MMORPG site. Building with BeautifulSoup, nested data structures, functions, and file I/O. Learning by solving a real problem with real data.</p>
+            <div class="project-meta"><span>Python</span><span>BeautifulSoup</span><span>Web Scraping</span></div>
         </div>
-
     </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- EXPERIENCE -->
 <section id="experience">
     <div class="section-label">Experience</div>
     <h2>Operational leadership meets&nbsp;technology.</h2>
-
     <div class="exp-list">
-
-        <div class="exp-item">
-            <div class="exp-date">2024 — Present</div>
-            <div class="exp-content">
-                <h3>AI Developer & Context Engineer</h3>
-                <div class="exp-org">Self-Employed — San Juan, PR</div>
-                <p>Shipping AI products independently. Published iOS app, built QA automation suites, designed context engineering systems. Currently studying agent architectures (LangChain/LangGraph) and deepening Python fundamentals.</p>
-            </div>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-date">2023 — 2024</div>
-            <div class="exp-content">
-                <h3>Deputy Project Manager — EHP Compliance</h3>
-                <div class="exp-org">IEM International — Guaynabo, PR</div>
-                <p>Managed $21M FEMA work order and 21-person cross-functional team. Built program from scratch — project charter through QA/QC plan. Compliance across 1,200+ disaster recovery projects under NEPA, ESA, CWA, CAA, and NHPA.</p>
-            </div>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-date">2023</div>
-            <div class="exp-content">
-                <h3>Oracle Aconex Specialist & M365 Global Admin</h3>
-                <div class="exp-org">Eniac Corporation — Guaynabo, PR</div>
-                <p>Forward-deployed technology specialist. Implemented Oracle Aconex for a major electric utility. 500+ licenses, 200+ employees trained. Microsoft 365 Global Administrator: Azure AD, Defender, Active Directory, 100+ servers.</p>
-            </div>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-date">2021 — 2022</div>
-            <div class="exp-content">
-                <h3>Technology Instructor & IT Systems Administrator</h3>
-                <div class="exp-org">Universidad de Puerto Rico — San Juan, PR</div>
-                <p>Programming instruction (Swift, Flutter, HTML, Python, robotics), IT systems administration, enterprise software deployment, and hardware management at UPR's distinguished laboratory high school. Faculty mentor for Computer Club. STEM instruction for 60+ public school teachers.</p>
-            </div>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-date">2008 — 2010</div>
-            <div class="exp-content">
-                <h3>Deputy Bureau Chief / Chief of Operations</h3>
-                <div class="exp-org">Florida Division of Emergency Management</div>
-                <p>Progressive leadership across Recovery, Preparedness, and Operations under the Governor's office. 24/7 operations across all 67 Florida counties. Managed multimillion-dollar federal recovery programs. Operations Chief for Operation Haiti Relief.</p>
-            </div>
-        </div>
-
+        <div class="exp-item"><div class="exp-date">2024 to Present</div><div class="exp-content"><h3>AI Integration Specialist & Context Engineer</h3><div class="exp-org">Self-Employed, San Juan, PR</div><p>Published an AI-powered iOS app using AI-assisted development. Set up QA automation suites with Playwright. Designed context engineering systems with measurable results. Currently studying agent architectures (LangChain/LangGraph) and deepening Python fundamentals.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2023 to 2024</div><div class="exp-content"><h3>Deputy Project Manager, EHP Compliance</h3><div class="exp-org">IEM International, Guaynabo, PR</div><p>Managed $21M FEMA work order and 21-person cross-functional team. Built program from scratch: project charter through QA/QC plan. Compliance across 1,200+ disaster recovery projects under NEPA, ESA, CWA, CAA, and NHPA.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2023</div><div class="exp-content"><h3>Oracle Aconex Specialist & M365 Global Admin</h3><div class="exp-org">Eniac Corporation, Guaynabo, PR</div><p>Forward-deployed technology specialist. Implemented Oracle Aconex for a major electric utility. 500+ licenses, 200+ employees trained. Microsoft 365 Global Administrator: Azure AD, Defender, Active Directory, 100+ servers.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2021 to 2022</div><div class="exp-content"><h3>Technology Instructor & IT Systems Administrator</h3><div class="exp-org">Universidad de Puerto Rico, San Juan, PR</div><p>Programming instruction (Swift, Flutter, HTML, Python, robotics), IT systems administration, enterprise software deployment, and hardware management at UPR's distinguished laboratory high school. Faculty mentor for Computer Club. STEM instruction for 60+ public school teachers.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2008 to 2010</div><div class="exp-content"><h3>Deputy Bureau Chief / Chief of Operations</h3><div class="exp-org">Florida Division of Emergency Management</div><p>Progressive leadership across Recovery, Preparedness, and Operations under the Governor's office. 24/7 operations across all 67 Florida counties. Managed multimillion-dollar federal recovery programs. Operations Chief for Operation Haiti Relief.</p></div></div>
     </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- MILITARY -->
 <section id="military">
     <div class="section-label">Military Service</div>
-    <h2>US Army &amp; Air Force National Guard&nbsp;·&nbsp;2001–2016</h2>
-    <p>
-        15 years of service including combat deployment to Iraq (2003–2004) with the 3rd Battalion, 124th Infantry Brigade in support of 1st Marine Expeditionary Forces. Hurricane Katrina relief operations. MOS progression from Infantry NCO to Heavy Equipment Operator to Public Affairs Specialist. Character of service: Honorable.
-    </p>
-
+    <h2>US Army &amp; Air Force National Guard&nbsp;&middot;&nbsp;2001 to 2016</h2>
+    <p>15 years of service including combat deployment to Iraq (2003 to 2004) with the 3rd Battalion, 124th Infantry Brigade in support of 1st Marine Expeditionary Forces. Hurricane Katrina relief operations. MOS progression from Infantry NCO to Heavy Equipment Operator to Public Affairs Specialist. Character of service: Honorable.</p>
     <div class="awards-list">
-        <span class="award">Combat Infantryman Badge</span>
-        <span class="award">Army Commendation Medal for Valor</span>
-        <span class="award">Presidential Unit Citation (Navy)</span>
-        <span class="award">Mississippi Emergency Service Medal</span>
-        <span class="award">Florida Meritorious Service Ribbon</span>
-        <span class="award">GWOT Expeditionary Medal</span>
-        <span class="award">National Defense Service Medal</span>
+        <span class="award">Combat Infantryman Badge</span><span class="award">Army Commendation Medal for Valor</span><span class="award">Presidential Unit Citation (Navy)</span><span class="award">Mississippi Emergency Service Medal</span><span class="award">Florida Meritorious Service Ribbon</span><span class="award">GWOT Expeditionary Medal</span><span class="award">National Defense Service Medal</span>
     </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- EDUCATION -->
 <section id="education">
     <div class="section-label">Education</div>
-
     <div class="exp-list">
-        <div class="exp-item">
-            <div class="exp-date">2017 — 2026</div>
-            <div class="exp-content">
-                <h3>Doctoral Studies — History (Coursework Completed)</h3>
-                <div class="exp-org">University of Puerto Rico, Río Piedras</div>
-                <p>International archival research across eight countries. Golden Key International Honour Society.</p>
-            </div>
-        </div>
-        <div class="exp-item">
-            <div class="exp-date">FSU</div>
-            <div class="exp-content">
-                <h3>Master of Science — Political Science</h3>
-                <div class="exp-org">Florida State University</div>
-            </div>
-        </div>
-        <div class="exp-item">
-            <div class="exp-date">FSU</div>
-            <div class="exp-content">
-                <h3>Bachelor of Arts — Spanish Language and Literature</h3>
-                <div class="exp-org">Florida State University</div>
-            </div>
-        </div>
+        <div class="exp-item"><div class="exp-date">2017 to 2026</div><div class="exp-content"><h3>Doctoral Studies, History (Coursework Completed)</h3><div class="exp-org">University of Puerto Rico, Rio Piedras</div><p>International archival research across eight countries. Golden Key International Honour Society.</p></div></div>
+        <div class="exp-item"><div class="exp-date">FSU</div><div class="exp-content"><h3>Master of Science, Political Science</h3><div class="exp-org">Florida State University</div></div></div>
+        <div class="exp-item"><div class="exp-date">FSU</div><div class="exp-content"><h3>Bachelor of Arts, Spanish Language and Literature</h3><div class="exp-org">Florida State University</div></div></div>
     </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- CONTACT -->
 <section id="contact">
     <div class="section-label">Contact</div>
     <h2>Let's talk.</h2>
     <p>Currently seeking roles in AI Integration, Context Engineering, AI Governance, QA Automation, and AI Evaluation. Remote from San Juan, PR. Available for travel.</p>
-
     <div class="contact-grid">
-        <div class="contact-item">
-            <div class="label">Email</div>
-            <a href="mailto:Louis.Kunasek@outlook.com">Louis.Kunasek@outlook.com</a>
-        </div>
-        <div class="contact-item">
-            <div class="label">GitHub</div>
-            <a href="https://github.com/plpk" target="_blank" rel="noopener">github.com/plpk</a>
-        </div>
-        <div class="contact-item">
-            <div class="label">LinkedIn</div>
-            <a href="https://linkedin.com/in/louiskunasek" target="_blank" rel="noopener">linkedin.com/in/louiskunasek</a>
-        </div>
-        <div class="contact-item">
-            <div class="label">Phone</div>
-            <a href="tel:+19292761980">(929) 276-1980</a>
-        </div>
+        <div class="contact-item"><div class="label">Email</div><a href="mailto:Louis.Kunasek@outlook.com">Louis.Kunasek@outlook.com</a></div>
+        <div class="contact-item"><div class="label">GitHub</div><a href="https://github.com/plpk" target="_blank" rel="noopener">github.com/plpk</a></div>
+        <div class="contact-item"><div class="label">LinkedIn</div><a href="https://linkedin.com/in/louiskunasek" target="_blank" rel="noopener">linkedin.com/in/louiskunasek</a></div>
+        <div class="contact-item"><div class="label">Phone</div><a href="tel:+19292761980">(929) 276-1980</a></div>
     </div>
 </section>
-
-<footer>
-    &copy; 2026 Louis Kunasek &nbsp;·&nbsp; San Juan, PR
-</footer>
-
+<footer>&copy; 2026 Louis Kunasek &nbsp;&middot;&nbsp; San Juan, PR</footer>
 </body>
 </html>
