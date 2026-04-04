@@ -8,7 +8,7 @@ San Juan, PR · Remote · US Army Combat Veteran
 
 Operations leader with 15+ years across military operations, state emergency management, regulatory compliance, and enterprise technology. Focused on AI integration, context engineering, and AI governance.
 
-I published an AI-powered iOS app to the Apple App Store using AI-assisted development. I set up automated E2E test suites with Microsoft Playwright against a production site. And I designed a context engineering system for AI-driven content production: voice architecture, hook taxonomy, ethical guardrails, and a multi-tool AI pipeline. That system achieved 2x the industry average engagement rate from a cold start.
+I published an AI-powered iOS app to the Apple App Store using AI-assisted development. I launched a bilingual news aggregation site for Puerto Rico from concept to production. I set up automated E2E test suites with Microsoft Playwright against a production site. And I designed a context engineering system for AI-driven content production: voice architecture, hook taxonomy, ethical guardrails, and a multi-tool AI pipeline. That system achieved 2x the industry average engagement rate from a cold start.
 
 ---
 
@@ -21,6 +21,7 @@ I published an AI-powered iOS app to the Apple App Store using AI-assisted devel
 ### Shipped Work
 
 📱 [**Purese**](https://apps.apple.com/us/app/purese/id6744907444) · AI-powered weather app integrating Google Gemini API. Published on the Apple App Store using AI-assisted development.  
+🌐 [**La Portada PR**](https://laportadapr.com) · Bilingual English/Spanish news aggregation site for Puerto Rico. Auto-pulls live headlines from six major PR news outlets. React/Next.js on Vercel. Conceived, designed, and deployed using AI-assisted development.  
 🎯 **TierCheckMedia** · Context engineering system for AI-driven content production. Custom GPT + ElevenLabs voice clone + AI music pipeline. 80,000+ views, 8.4% engagement rate in 15 days.  
 ✅ **Playwright Test Suite** · Automated E2E tests set up for a production website with a 20+ year active user base.
 
@@ -43,4 +44,4 @@ I published an AI-powered iOS app to the Apple App Store using AI-assisted devel
 
 **Seeking roles in:** AI Integration · Context Engineering · AI Governance · QA Automation · AI Evaluation
 
-📫 **Louis.Kunasek@outlook.com** · [LinkedIn](https://linkedin.com/in/louiskunasek) · [App Store](https://apps.apple.com/us/app/purese/id6744907444)
+📫 **Louis.Kunasek@outlook.com** · [LinkedIn](https://linkedin.com/in/louiskunasek) · [App Store](https://apps.apple.com/us/app/purese/id6744907444) · [La Portada PR](https://laportadapr.com)
