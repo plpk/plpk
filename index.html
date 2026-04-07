@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis Kunasek | Context Engineering &amp; AI Integration</title>
-    <meta name="description" content="Louis Kunasek. Context engineer focused on AI integration, context engineering, and AI governance. US Army combat veteran. San Juan, PR.">
+    <title>Louis Kunasek | Context Engineer &amp; AI Integration</title>
+    <meta name="description" content="Louis Kunasek. Context Engineer focused on AI integration, AI governance, and QA automation. Designer and operator of The State Page Network, a multi-deployment civic news platform live in Puerto Rico and Texas. US Army combat veteran. San Juan, PR.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -47,13 +47,24 @@
         .projects-grid { display: grid; gap: 1.5rem; margin-top: 1rem; }
         .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; transition: background 0.25s, border-color 0.25s; }
         .project-card:hover { background: var(--bg-card-hover); border-color: var(--accent-border); }
+        .project-card.featured { border-color: var(--accent-border); background: linear-gradient(180deg, rgba(201,148,62,0.04) 0%, var(--bg-card) 60%); }
         .project-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); background: var(--accent-dim); padding: 0.25rem 0.65rem; border-radius: 3px; margin-bottom: 1rem; }
         .project-card h3 { font-family: var(--serif); font-size: 1.35rem; margin-bottom: 0.75rem; }
+        .project-card.featured h3 { font-size: 1.6rem; }
         .project-card p { font-size: 0.925rem; line-height: 1.75; }
         .project-meta { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .project-meta span { font-size: 0.75rem; color: var(--text-muted); background: rgba(232, 228, 223, 0.05); padding: 0.25rem 0.6rem; border-radius: 3px; }
         .project-link { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 1.25rem; color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
         .project-link:hover { text-decoration: underline; }
+        .deployment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.75rem; }
+        .deployment { background: rgba(12, 11, 10, 0.5); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; }
+        .deployment-flag { font-size: 1.1rem; margin-bottom: 0.4rem; }
+        .deployment h4 { font-family: var(--serif); font-size: 1.05rem; margin-bottom: 0.25rem; }
+        .deployment .deployment-meta { font-size: 0.72rem; color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.65rem; }
+        .deployment p { font-size: 0.825rem; line-height: 1.7; margin-bottom: 0.75rem; }
+        .deployment a { font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: 500; }
+        .deployment a:hover { text-decoration: underline; }
+        @media (max-width: 600px) { .deployment-grid { grid-template-columns: 1fr; } }
         .exp-list { display: grid; gap: 2rem; margin-top: 1rem; }
         .exp-item { display: grid; grid-template-columns: 140px 1fr; gap: 1.5rem; align-items: start; }
         .exp-date { font-size: 0.8rem; color: var(--text-muted); padding-top: 0.25rem; font-weight: 500; }
@@ -88,25 +99,26 @@
 </nav>
 <div class="hero">
     <div class="hero-location">San Juan, PR &nbsp;&middot;&nbsp; Remote &nbsp;&middot;&nbsp; Available for Travel</div>
-    <h1>Context Engineering<br>&amp; AI Integration</h1>
-    <p class="hero-sub">Context engineer focused on AI integration, context engineering, and AI governance. Diverse career across military service, state emergency management, regulatory compliance, and enterprise software implementation. US Army combat veteran. Bilingual English / Spanish.</p>
+    <h1>Context Engineering &amp;<br>AI Integration</h1>
+    <p class="hero-sub">Four AI products and a QA automation suite shipped to production since August 2024, including a multi-deployment civic news platform now live in two structurally different markets. US Army combat veteran. Background spans military operations, state emergency management, regulatory compliance, and enterprise software implementation. Bilingual English and Spanish, both native.</p>
     <div class="hero-links">
         <a href="mailto:Louis.Kunasek@outlook.com" class="primary">Get in Touch</a>
         <a href="https://github.com/plpk" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/louiskunasek" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://apps.apple.com/us/app/purese/id6744907444" target="_blank" rel="noopener">App Store</a>
         <a href="https://laportadapr.com" target="_blank" rel="noopener">La Portada PR</a>
+        <a href="https://tx.thestatepage.com" target="_blank" rel="noopener">The StatePageTX</a>
+        <a href="https://apps.apple.com/us/app/purese/id6744907444" target="_blank" rel="noopener">App Store</a>
     </div>
 </div>
 <div class="divider"></div>
 <section id="about">
     <div class="section-label">About</div>
-    <h2>Where AI capability meets organizational&nbsp;readiness.</h2>
-    <p>Since August 2024 I've shipped three AI products and a QA automation suite to production. I published an AI-powered iOS app to the Apple App Store using Google's Gemini API and AI-assisted development. I conceived and launched La Portada PR, a live news aggregation platform for Puerto Rico, and wrote the editorial prompt architecture for two production AI systems running on it. I designed a context engineering system for AI-driven short-form video production that hit double the industry-average engagement rate from a cold start. And I set up an automated end-to-end test suite with Microsoft Playwright against a production website with a 20+ year user base.</p>
-    <p>My background in regulatory compliance (NEPA, ESA, CWA, NHPA), QA/QC program development, and multi-stakeholder coordination maps directly to the AI governance and integration challenges organizations face today. Currently deepening Python through a real project, studying agent architectures with LangChain and LangGraph, and going further on AI evaluation methodology.</p>
+    <h2>Where compliance discipline meets AI&nbsp;capability.</h2>
+    <p>Every role I've held has been different from the last one. Infantry in Iraq. Running 24/7 operations at Florida's emergency operations center. Covering Hurricane Maria as a photojournalist while the island had no power. Managing a $21 million FEMA compliance program. Implementing enterprise software at a major utility. Conducting archival research across eight countries. What connects all of it: I walk into complex, high-stakes environments, learn fast, and deliver.</p>
+    <p>I direct AI tools to write code, then make the product, editorial, and quality decisions the tools can't make on their own. Context engineering, product direction, AI evaluation, and shipping are the skills. My background in regulatory compliance (NEPA, ESA, CWA, NHPA), QA/QC program development, and multi-stakeholder coordination maps directly to the AI governance and integration challenges organizations face today. Currently learning Python through a real project, working through LangChain Academy, and going deeper on agent architectures and AI evaluation methodologies.</p>
     <div class="stats-row">
+        <div class="stat"><div class="stat-number">2</div><div class="stat-label">Live Network Deployments</div></div>
         <div class="stat"><div class="stat-number">$21M</div><div class="stat-label">FEMA Compliance Program</div></div>
-        <div class="stat"><div class="stat-number">1,200+</div><div class="stat-label">Compliance Projects Managed</div></div>
         <div class="stat"><div class="stat-number">8</div><div class="stat-label">Countries, Archival Research</div></div>
         <div class="stat"><div class="stat-number">2x</div><div class="stat-label">Industry Avg. Engagement</div></div>
     </div>
@@ -114,73 +126,97 @@
 <div class="divider"></div>
 <section id="projects">
     <div class="section-label">Shipped Work</div>
-    <h2>Shipped products, real systems, live&nbsp;data.</h2>
+    <h2>Real products. Real systems. Live&nbsp;data.</h2>
     <div class="projects-grid">
-        <div class="project-card">
-            <div class="project-tag">Live Platform</div>
-            <h3>La Portada PR: News Aggregation for Puerto Rico</h3>
-            <p>News aggregation platform for Puerto Rico, pulling headlines from nine news outlets and a government agenda scraper covering the PR Senate, House of Representatives, municipalities, and state agencies. Wrote the editorial prompt architecture for two production Gemini 2.5 Flash systems: a categorization pipeline with relevance rules, category routing, tie-breaker logic, and importance scoring; and a live editorial briefing ("Lo esencial al momento") that generates summaries every five minutes.</p>
-            <p style="color: var(--text); font-weight: 500; margin-top: 0.5rem;">Conceived, designed, directed AI-assisted development, deployed and maintained in production through 15+ rounds of editorial and design iteration.</p>
-            <div class="project-meta"><span>React / Next.js</span><span>Vercel</span><span>Cloudflare</span><span>Gemini 2.5 Flash</span><span>Editorial Prompt Architecture</span></div>
-            <a class="project-link" href="https://laportadapr.com" target="_blank" rel="noopener">Visit La Portada PR &rarr;</a>
+
+        <div class="project-card featured">
+            <div class="project-tag">The State Page Network &nbsp;&middot;&nbsp; Two Live Deployments</div>
+            <h3>A multi-deployment civic news platform.</h3>
+            <p>I designed and shipped The State Page Network: a multi-deployment civic news aggregation platform with production AI editorial pipelines, now live in two structurally different markets. As product owner and editorial architect, I made every brand, editorial, source curation, section structure, and architectural decision. I wrote the editorial prompt architecture for both deployments and directed AI-assisted development end to end.</p>
+            <p>Both sites run shared architectural DNA, Next.js 14 App Router, Vercel ISR with five-minute revalidation, Cloudflare DNS, Gemini 2.5 Flash editorial AI, dual-typeface system, adapted at every layer to the realities of each market. Building the second deployment is what revealed which parts of the first were genuinely shared infrastructure and which were market-specific assumptions. Adapting to Texas required deliberate new decisions at almost every layer: brand identity and color, section structure (seven down to four), source list, language polarity, agenda strip logic, and a rewritten categorization prompt with a Texas relevance gate.</p>
+
+            <div class="deployment-grid">
+                <div class="deployment">
+                    <div class="deployment-flag">🇵🇷</div>
+                    <h4>La Portada PR</h4>
+                    <div class="deployment-meta">First Deployment &nbsp;&middot;&nbsp; April 2026</div>
+                    <p>Spanish-language news aggregation for Puerto Rico, modeled after the Drudge Report and Sayfie Review. Pulls from nine PR news outlets every five minutes plus a government agenda scraper covering the PR Senate, House of Representatives, municipalities, and state agencies. Two production Gemini 2.5 Flash systems: a categorization pipeline with relevance rules, category routing, tie-breaker logic, and importance scoring; and "Lo esencial al momento," a live editorial briefing that regenerates every five minutes. Site defaults to Spanish, no language toggle.</p>
+                    <a href="https://laportadapr.com" target="_blank" rel="noopener">laportadapr.com &rarr;</a>
+                </div>
+                <div class="deployment">
+                    <div class="deployment-flag">🤠</div>
+                    <h4>The StatePageTX</h4>
+                    <div class="deployment-meta">Second Deployment &nbsp;&middot;&nbsp; April 7, 2026</div>
+                    <p>English-language statewide political and government news aggregator for Texas. Targets political staffers, lobbyists, journalists, and policy professionals. Sixteen RSS feeds curated for political balance across the spectrum. Four-section structure (Politics, Government, Business Tech and Energy, Border) deliberately narrowed from PR's seven-section layout to create a defensible niche against established Texas outlets. Government agenda strip with session/interim flex logic for the Texas Legislature's biennial schedule.</p>
+                    <a href="https://tx.thestatepage.com" target="_blank" rel="noopener">tx.thestatepage.com &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-meta"><span>Next.js 14</span><span>Gemini 2.5 Flash</span><span>Editorial Prompt Architecture</span><span>Vercel</span><span>Cloudflare</span><span>Multi-Tenant Thinking</span></div>
         </div>
-        <div class="project-card">
-            <div class="project-tag">Context Engineering</div>
-            <h3>TierCheckMedia: AI Content Production System</h3>
-            <p>Context engineering system for AI-driven short-form video production. Designed the full informational architecture: voice rules, eight classified hook archetypes with structural formulas, anti-AI-detection constraints, time-coded script generation, TTS-ready voiceover blocks, ethical guardrails, and a multi-tool AI pipeline integrating a custom GPT, an ElevenLabs voice clone, and AI-generated music.</p>
-            <p style="color: var(--text); font-weight: 500; margin-top: 0.5rem;">First 15 days: 80,000+ views, 6,700+ likes, 8.4% engagement rate (2x industry average).</p>
-            <div class="project-meta"><span>Custom GPT</span><span>ElevenLabs</span><span>Voice Design</span><span>Ethical AI</span></div>
-        </div>
+
         <div class="project-card">
             <div class="project-tag">Published App</div>
             <h3>Purese: AI-Powered Weather App</h3>
-            <p>Minimalist weather app integrating Google's Gemini API for AI-generated weather recommendations. Designed with no personal data collection. Free, no ads. Published to the Apple App Store using AI-assisted development.</p>
-            <div class="project-meta"><span>Google Gemini API</span><span>AI-Assisted Development</span><span>iOS</span><span>App Store</span></div>
+            <p>Minimalist iOS weather app integrating Google Gemini Nano API for AI-generated weather recommendations. Designed with no personal data collection. Published to the Apple App Store using AI-assisted development. I directed the build, debugged it, and navigated the full Apple submission and review process independently.</p>
+            <div class="project-meta"><span>Google Gemini Nano API</span><span>AI-Assisted Development</span><span>iOS</span><span>App Store</span></div>
             <a class="project-link" href="https://apps.apple.com/us/app/purese/id6744907444" target="_blank" rel="noopener">View on App Store &rarr;</a>
         </div>
+
+        <div class="project-card">
+            <div class="project-tag">Context Engineering</div>
+            <h3>TierCheckMedia: AI Content Production System</h3>
+            <p>Context engineering system for AI-driven short-form video production. Designed the full informational architecture: voice rules, hook taxonomy with structural formulas, anti-AI-detection constraints, time-coded script generation, TTS-ready voiceover formatting, ethical guardrails, and a multi-tool AI pipeline integrating a custom GPT, an ElevenLabs voice clone, and AI-generated music.</p>
+            <p style="color: var(--text); font-weight: 500; margin-top: 0.5rem;">Results in the first 15 days: 80,000+ views, 6,700+ likes, 8.4% engagement rate. Double the industry average from a cold start. Channels currently hibernated.</p>
+            <div class="project-meta"><span>Custom GPT</span><span>ElevenLabs</span><span>Voice Architecture</span><span>Ethical Guardrails</span></div>
+        </div>
+
         <div class="project-card">
             <div class="project-tag">QA Automation</div>
             <h3>Playwright End-to-End Test Suite</h3>
-            <p>Microsoft Playwright automated end-to-end test suite set up and deployed against a production website with a 20+ year active user base. Real-world QA automation against live systems with real users and real data.</p>
+            <p>Microsoft Playwright automated end-to-end tests deployed against a production website with a 20+ year user base and active community. Real-world QA automation against live systems, real users, and real data.</p>
             <div class="project-meta"><span>Microsoft Playwright</span><span>TypeScript</span><span>E2E Testing</span></div>
             <a class="project-link" href="https://github.com/plpk" target="_blank" rel="noopener">View on GitHub &rarr;</a>
         </div>
+
         <div class="project-card">
             <div class="project-tag">In Progress</div>
             <h3>FFXI Crafting Profit Calculator</h3>
-            <p>Python learning project scraping live auction house data from a production MMORPG site. Build-to-learn approach: BeautifulSoup, nested data structures, functions, and file I/O. Solving a real problem with real data.</p>
+            <p>Python learning project scraping live auction house data from a production MMORPG community site with a 20+ year user base. Building with BeautifulSoup, nested data structures, functions, and file I/O. Learning by solving a real problem with real data, no tutorials.</p>
             <div class="project-meta"><span>Python</span><span>BeautifulSoup</span><span>Web Scraping</span></div>
         </div>
+
     </div>
 </section>
 <div class="divider"></div>
 <section id="experience">
     <div class="section-label">Experience</div>
-    <h2>Operational depth meets&nbsp;technology.</h2>
+    <h2>Operational leadership meets&nbsp;technology.</h2>
     <div class="exp-list">
-        <div class="exp-item"><div class="exp-date">2024 to Present</div><div class="exp-content"><h3>Context Engineer</h3><div class="exp-org">Self-Employed, San Juan, PR</div><p>Three AI products and a QA automation suite shipped to production since August 2024. Published an iOS app to the Apple App Store. Conceived and launched a live news aggregation platform for Puerto Rico and wrote the editorial prompt architecture for two production AI systems running on it. Designed a context engineering system for AI-driven content production with measurable results. Set up Microsoft Playwright automation against a real production site. Currently deepening Python and studying agent architectures with LangChain and LangGraph.</p></div></div>
-        <div class="exp-item"><div class="exp-date">2023 to 2024</div><div class="exp-content"><h3>Deputy Project Manager, EHP Compliance</h3><div class="exp-org">IEM International, Guaynabo, PR</div><p>Managed $21M FEMA work order and 21-person cross-functional team. Built program from scratch: authored Project Charter, Project Plan, Communication Plan, Risk Management Plan, and QA/QC Plan. Compliance across 1,200+ disaster recovery projects under NEPA, ESA, CWA, CAA, and NHPA. Coordinated subcontractor teams across remote locations including Vieques and Culebra.</p></div></div>
-        <div class="exp-item"><div class="exp-date">2023</div><div class="exp-content"><h3>Oracle Aconex Specialist</h3><div class="exp-org">Eniac Corporation, Guaynabo, PR</div><p>Implemented Oracle Aconex project management system at a major electric utility, embedded in the client's PMO and QA/QC department. Oracle Aconex Accredited Specialist. Managed 500+ licenses, trained employees across multiple divisions on project documentation, approvals, and compliance workflows. Built custom workflows for environmental compliance reporting. Also served as Microsoft 365 administrator for Eniac's internal office.</p></div></div>
-        <div class="exp-item"><div class="exp-date">2021 to 2022</div><div class="exp-content"><h3>Teaching Assistant, Technology Department</h3><div class="exp-org">Universidad de Puerto Rico, San Juan, PR</div><p>Programming instruction (Swift, Python, robotics), IT systems administration, enterprise software deployment, and hardware management at UPR's distinguished laboratory high school. Faculty mentor for the Computer Club. STEM instruction for 60+ public school teachers.</p></div></div>
-        <div class="exp-item"><div class="exp-date">2008 to 2010</div><div class="exp-content"><h3>Deputy Bureau Chief / Chief of Operations</h3><div class="exp-org">Florida Division of Emergency Management</div><p>Progressive leadership across Recovery, Preparedness, and Operations bureaus under the Governor's office. 24/7 operations across all 67 Florida counties. Managed multimillion-dollar federal recovery programs at the state level. Operations Chief for Operation Haiti Relief. Helped introduce social media for state emergency communications under Director Craig Fugate's initiative, training 130+ employees.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2024 to Present</div><div class="exp-content"><h3>Context Engineer</h3><div class="exp-org">Self-Employed, San Juan, PR</div><p>Designed and shipped The State Page Network, a multi-deployment civic news platform live in Puerto Rico (laportadapr.com) and Texas (tx.thestatepage.com). Wrote the editorial prompt architecture for both deployments. Published Purese to the Apple App Store. Designed the TierCheckMedia context engineering system. Set up a Playwright E2E test suite against a production website. Currently studying agent architectures (LangChain / LangGraph) and deepening Python fundamentals through a real project.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2023 to 2024</div><div class="exp-content"><h3>Deputy Project Manager, EHP Compliance</h3><div class="exp-org">IEM International, Guaynabo, PR</div><p>Managed $21 million FEMA work order for Environmental Planning and Historic Preservation compliance. Led a 21-person cross-functional team. Authored the Project Charter, Project Plan, Communication Plan, Risk Management Plan, and QA/QC Plan. Compliance across 1,200+ disaster recovery projects under NEPA, ESA, CWA, CAA, and NHPA, including 31 vegetation management projects valued at $1.2 billion.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2023</div><div class="exp-content"><h3>Oracle Aconex Specialist</h3><div class="exp-org">Eniac Corporation, Guaynabo, PR</div><p>Forward-deployed technology specialist embedded in a major electric utility's PMO and QA/QC department. Implemented Oracle Aconex company-wide. Managed 500+ software licenses. Built custom workflows and adapted the platform for environmental compliance reporting. Oracle Aconex Accredited Specialist. Also served as Microsoft 365 administrator for Eniac's internal office while deployed.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2021 to 2022</div><div class="exp-content"><h3>Teaching Assistant, Technology Department</h3><div class="exp-org">Escuela Secundaria, Universidad de Puerto Rico</div><p>Programming instruction in Swift, HTML, Python, Scratch, and VEXcode VR robotics at UPR's laboratory high school. Lab IT, hardware management, and software deployment across 25+ desktops. Faculty mentor for the student Computer Club. Subsequently served as DECEP Course Instructor delivering STEM certification to 60+ public school teachers.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2008 to 2010</div><div class="exp-content"><h3>Deputy Bureau Chief / Chief of Operations</h3><div class="exp-org">Florida Division of Emergency Management</div><p>Progressive leadership across Recovery, Preparedness, and Operations bureaus under the Governor's office. 24/7 operations at the State Watch Office and State Emergency Operations Center across all 67 Florida counties. Managed multimillion-dollar federal recovery programs (FEMA Public Assistance, Debris Operations). Operations Chief for Operation Haiti Relief. Helped introduce social media for state emergency communications under Director Craig Fugate's initiative, training 130+ employees.</p></div></div>
     </div>
 </section>
 <div class="divider"></div>
 <section id="military">
     <div class="section-label">Military Service</div>
     <h2>US Army &amp; Air Force National Guard&nbsp;&middot;&nbsp;2001 to 2016</h2>
-    <p>Fifteen years of service including combat deployment to Iraq (2003 to 2004) with the 3rd Battalion, 124th Infantry Brigade in support of 1st Marine Expeditionary Forces. Hurricane Katrina relief operations in Mississippi. MOS progression from Infantry to Heavy Equipment Operator to Public Affairs Specialist. Character of service: Honorable.</p>
+    <p>Fifteen years of service across the Florida Army National Guard, Puerto Rico Army National Guard, and US Air Force National Guard. Combat deployment to Iraq 2003 to 2004 with the 3rd Battalion, 124th Infantry in support of 1st Marine Expeditionary Forces. Hurricane Katrina relief operations, Bay St. Louis, Mississippi, 2005. MOS progression from Infantry to Heavy Equipment Operator to Public Affairs Specialist. Character of service: Honorable.</p>
     <div class="awards-list">
-        <span class="award">Combat Infantryman Badge</span><span class="award">Army Commendation Medal for Valor</span><span class="award">Presidential Unit Citation (Navy)</span><span class="award">Mississippi Emergency Service Medal</span><span class="award">Florida Meritorious Service Ribbon</span><span class="award">GWOT Expeditionary Medal</span><span class="award">National Defense Service Medal</span>
+        <span class="award">Combat Infantryman Badge</span><span class="award">Army Commendation Medal for Valor</span><span class="award">Presidential Unit Citation (Navy)</span><span class="award">Mississippi Emergency Service Medal</span><span class="award">Florida Meritorious Service Ribbon</span><span class="award">GWOT Expeditionary Medal</span><span class="award">National Defense Service Medal</span><span class="award">Armed Forces Reserve Medal</span>
     </div>
 </section>
 <div class="divider"></div>
 <section id="education">
     <div class="section-label">Education</div>
     <div class="exp-list">
-        <div class="exp-item"><div class="exp-date">UPR</div><div class="exp-content"><h3>Doctoral Studies, History (Coursework Completed)</h3><div class="exp-org">University of Puerto Rico, Río Piedras</div><p>International archival research across eight countries. Research focus: Puerto Rico international relations with Latin America. Golden Key International Honour Society.</p></div></div>
-        <div class="exp-item"><div class="exp-date">FSU</div><div class="exp-content"><h3>Master of Science, Political Science</h3><div class="exp-org">Florida State University</div></div></div>
+        <div class="exp-item"><div class="exp-date">UPR</div><div class="exp-content"><h3>Doctoral Studies, History (Coursework Completed)</h3><div class="exp-org">University of Puerto Rico, Río Piedras</div><p>All doctoral coursework completed. Research focus: Puerto Rico international relations with Latin America. International archival research across El Salvador, Guatemala, Panama, Peru, Colombia, Mexico, Ecuador, and Bolivia. Official researcher credential at Archivo General de la Nación, Lima, Peru. Golden Key International Honour Society.</p></div></div>
+        <div class="exp-item"><div class="exp-date">FSU</div><div class="exp-content"><h3>Master of Science, Political Science</h3><div class="exp-org">Florida State University</div><p>Concentration: Applied American Politics &amp; Policy.</p></div></div>
         <div class="exp-item"><div class="exp-date">FSU</div><div class="exp-content"><h3>Bachelor of Arts, Spanish Language and Literature</h3><div class="exp-org">Florida State University</div></div></div>
+        <div class="exp-item"><div class="exp-date">DINFOS</div><div class="exp-content"><h3>US Air Force Basic Photojournalism</h3><div class="exp-org">Defense Information School, Fort Meade, MD</div></div></div>
     </div>
 </section>
 <div class="divider"></div>
@@ -190,9 +226,10 @@
     <p>Open to remote roles in Context Engineering, AI Integration, AI Governance, QA Automation, and AI Evaluation. Based in San Juan, PR. Available for travel.</p>
     <div class="contact-grid">
         <div class="contact-item"><div class="label">Email</div><a href="mailto:Louis.Kunasek@outlook.com">Louis.Kunasek@outlook.com</a></div>
+        <div class="contact-item"><div class="label">LinkedIn</div><a href="https://linkedin.com/in/louiskunasek" target="_blank" rel="noopener">linkedin.com/in/louiskunasek</a></div>
         <div class="contact-item"><div class="label">GitHub</div><a href="https://github.com/plpk" target="_blank" rel="noopener">github.com/plpk</a></div>
         <div class="contact-item"><div class="label">La Portada PR</div><a href="https://laportadapr.com" target="_blank" rel="noopener">laportadapr.com</a></div>
-        <div class="contact-item"><div class="label">LinkedIn</div><a href="https://linkedin.com/in/louiskunasek" target="_blank" rel="noopener">linkedin.com/in/louiskunasek</a></div>
+        <div class="contact-item"><div class="label">The StatePageTX</div><a href="https://tx.thestatepage.com" target="_blank" rel="noopener">tx.thestatepage.com</a></div>
         <div class="contact-item"><div class="label">Phone</div><a href="tel:+19292761980">(929) 276-1980</a></div>
     </div>
 </section>
