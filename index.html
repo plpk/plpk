@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louis Kunasek | AI Integration & Context Engineering</title>
-    <meta name="description" content="Louis Kunasek. Context Engineer focused on AI integration, AI governance, and QA automation. Designer and operator of portada-engine, a config-driven multi-tenant civic news platform with four live markets across two languages and two brand families. US Army combat veteran. San Juan, PR.">
+    <meta name="description" content="Louis Kunasek. Context Engineer focused on AI integration, AI governance, and QA automation. Designer and operator of portada-engine, a config-driven multi-tenant civic news platform with 11 live markets across two languages and three brand families. US Army combat veteran. San Juan, PR.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -54,6 +54,14 @@
         .project-meta span { font-size: 0.75rem; color: var(--text-muted); background: rgba(232, 228, 223, 0.05); padding: 0.25rem 0.6rem; border-radius: 3px; }
         .project-link { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 1.25rem; color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
         .project-link:hover { text-decoration: underline; }
+        .deployment-grid { display: grid; gap: 1rem; margin-top: 1.75rem; }
+        .deployment-family { background: rgba(232, 228, 223, 0.025); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.4rem; }
+        .deployment-family h4 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 0.3rem; color: var(--text); }
+        .deployment-family-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .market-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .market-chip { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.4rem 0.8rem; background: var(--bg-card-hover); border: 1px solid var(--border); border-radius: 4px; color: var(--text); text-decoration: none; font-size: 0.85rem; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+        .market-chip:hover { border-color: var(--accent-border); color: var(--accent); background: var(--accent-dim); }
+        .market-chip-flag { font-size: 1rem; line-height: 1; }
         .exp-list { display: grid; gap: 2rem; margin-top: 1rem; }
         .exp-item { display: grid; grid-template-columns: 140px 1fr; gap: 1.5rem; align-items: start; }
         .exp-date { font-size: 0.8rem; color: var(--text-muted); padding-top: 0.25rem; font-weight: 500; }
@@ -89,7 +97,7 @@
 <div class="hero">
     <div class="hero-location">San Juan, PR &nbsp;&middot;&nbsp; Remote &nbsp;&middot;&nbsp; Available for Travel</div>
     <h1>Context Engineering &amp;<br>AI Integration</h1>
-    <p class="hero-sub">Four AI products and a QA automation suite shipped to production since August 2024, including portada-engine, a config-driven multi-tenant civic news platform now running four live markets across two languages and two brand families. US Army combat veteran. Background spans military service, state emergency management, regulatory compliance, and enterprise software implementation. Bilingual English and Spanish, both native.</p>
+    <p class="hero-sub">Three AI products and a QA automation suite shipped to production since August 2024, including portada-engine, a config-driven multi-tenant civic news platform now running 11 live markets across two languages and three brand families. US Army combat veteran. Background spans military service, state emergency management, regulatory compliance, and enterprise software implementation. Bilingual English and Spanish, both native.</p>
     <div class="hero-links">
         <a href="mailto:Louis.Kunasek@outlook.com" class="primary">Get in Touch</a>
         <a href="https://github.com/plpk" target="_blank" rel="noopener">GitHub</a>
@@ -106,7 +114,7 @@
     <p>Every role I've held has been different from the last one. Infantry in Iraq. Running 24/7 operations at Florida's emergency operations center. Covering Hurricane Maria as a photojournalist while the island had no power. Managing a $21 million FEMA compliance program. Implementing enterprise software at a major utility. Conducting archival research across eight countries. What connects all of it: I walk into complex, high-stakes environments, learn fast, and deliver.</p>
     <p>I direct AI tools to write code, then make the product, editorial, and quality decisions the tools can't make on their own. Context engineering, product direction, AI evaluation, and shipping are the skills. My background in regulatory compliance (NEPA, ESA, CWA, NHPA), QA/QC program development, and multi-stakeholder coordination maps directly to the AI governance and integration challenges organizations face today. Currently learning Python through a real project, working through LangChain Academy, and going deeper on agent architectures and AI evaluation.</p>
     <div class="stats-row">
-        <div class="stat"><div class="stat-number">4</div><div class="stat-label">Live Markets in Production</div></div>
+        <div class="stat"><div class="stat-number">11</div><div class="stat-label">Live Markets in Production</div></div>
         <div class="stat"><div class="stat-number">$21M</div><div class="stat-label">FEMA Compliance Program</div></div>
         <div class="stat"><div class="stat-number">8</div><div class="stat-label">Countries, Archival Research</div></div>
         <div class="stat"><div class="stat-number">2x</div><div class="stat-label">Industry Avg. Engagement</div></div>
@@ -119,44 +127,46 @@
     <div class="projects-grid">
 
         <div class="project-card featured">
-            <div class="project-tag">portada-engine &nbsp;&middot;&nbsp; Four Live Markets</div>
+            <div class="project-tag">portada-engine &nbsp;&middot;&nbsp; 11 Live Markets</div>
             <h3>A config-driven multi-tenant civic news platform.</h3>
-            <p>portada-engine is a config-driven multi-tenant political news aggregation platform I conceived, designed, and launched. Four live markets in production from a single GitHub repository as independent Vercel projects reading per-market configuration files. Two brand families: La Portada for Latin America and Spain, The StatePage for the United States.</p>
+            <p>portada-engine is a config-driven multi-tenant political news aggregation platform I conceived, designed, and launched. Eleven live markets in production from a single GitHub repository as independent Vercel projects reading per-market configuration files. Three brand families: La Portada (Spanish, Latin America and Spain), The StatePage (English, US, with state subdomains under a national apex), and The EnglandPage (English, country-level standalone, introducing a wordmark schema pattern reusable for future country sites).</p>
             <p>As product owner, creative director, and technical director, I made every product, editorial, design, and architectural decision. I directed the refactor from a single-market codebase into a config-driven engine through a schema design pressure-tested against multiple concrete markets before any code was written. I wrote the editorial prompt architecture for each market, decomposed into 11 reusable per-market components (relevance rules, category routing, tie-breakers, KEEP/DROP examples, importance scoring, briefing voice) with anti-inflation discipline in shared engine code. AI coding assistants generated all production code under my direction.</p>
-            <p>All four markets run shared infrastructure (Next.js 14 App Router, Vercel Pro, Cloudflare DNS and Registrar, Google Gemini 2.5 Flash for per-market categorization and briefing generation, ISR with five-minute revalidation) adapted at every layer to each market through configuration. 16 La Portada apex domains are registered at Cloudflare for opportunistic future market launches.</p>
+            <p>All eleven markets run shared infrastructure (Next.js 14 App Router, Vercel Pro, Cloudflare DNS and Registrar, region-split Google Gemini 2.5 Flash Lite keys for editorial briefing generation, ISR with five-minute revalidation, dual-typeface system) adapted at every layer to each market through configuration. Categorization is rule-based with zero AI calls. The Social Pulse module (Bluesky, YouTube RSS, generic RSS) handles non-news signal at zero AI cost.</p>
+            <p style="color: var(--text); font-weight: 500; margin-top: 0.75rem;">Recent cost-engineering work dropped Gemini spend from ~$300 in a few days on broken calls to ~$1.41/month at 10 markets on hourly cadence. Projected under $10/month at 50 markets. 353 Vitest tests cover the categorizer, prompt builder, RSS pipeline, copy dictionary, palette validation, voices routing, and deprecated-field guards.</p>
 
             <div class="deployment-grid">
-                <div class="deployment">
-                    <div class="deployment-flag">&#127477;&#127479;</div>
-                    <h4>La Portada PR</h4>
-                    <div class="deployment-meta">First Deployment &nbsp;&middot;&nbsp; April 2026</div>
-                    <p>Spanish-language news for Puerto Rico. Modeled after the Drudge Report and Sayfie Review. Pulls from PR news outlets every five minutes plus a government agenda scraper covering the PR Senate, House, municipalities, and state agencies. "Lo esencial al momento" is the live editorial briefing.</p>
-                    <a href="https://laportadapr.com" target="_blank" rel="noopener">laportadapr.com &rarr;</a>
+                <div class="deployment-family">
+                    <h4>La Portada</h4>
+                    <div class="deployment-family-meta">Spanish &nbsp;&middot;&nbsp; Latin America &amp; Spain &nbsp;&middot;&nbsp; 4 markets</div>
+                    <div class="market-list">
+                        <a class="market-chip" href="https://laportadapr.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#127477;&#127479;</span> La Portada PR</a>
+                        <a class="market-chip" href="https://laportadamx.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#127474;&#127485;</span> La Portada MX</a>
+                        <a class="market-chip" href="https://laportadaco.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#127464;&#127476;</span> La Portada CO</a>
+                        <a class="market-chip" href="https://laportadaes.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#127466;&#127480;</span> La Portada ES</a>
+                    </div>
                 </div>
-                <div class="deployment">
-                    <div class="deployment-flag">&#127482;&#127480;</div>
+                <div class="deployment-family">
                     <h4>The StatePage</h4>
-                    <div class="deployment-meta">US National Apex</div>
-                    <p>English-language US national civic news. Anchors the US brand family with state subdomains inheriting from the parent. Same editorial AI pipeline architecture as the LATAM markets, adapted for English-language sources and US political structure.</p>
-                    <a href="https://thestatepage.com" target="_blank" rel="noopener">thestatepage.com &rarr;</a>
+                    <div class="deployment-family-meta">English &nbsp;&middot;&nbsp; United States &nbsp;&middot;&nbsp; National apex + 5 state subdomains</div>
+                    <div class="market-list">
+                        <a class="market-chip" href="https://thestatepage.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#127482;&#127480;</span> National</a>
+                        <a class="market-chip" href="https://fl.thestatepage.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#127796;</span> Florida</a>
+                        <a class="market-chip" href="https://ca.thestatepage.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#127753;</span> California</a>
+                        <a class="market-chip" href="https://ny.thestatepage.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#128509;</span> New York</a>
+                        <a class="market-chip" href="https://pa.thestatepage.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#129413;</span> Pennsylvania</a>
+                        <a class="market-chip" href="https://tx.thestatepage.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#129312;</span> Texas</a>
+                    </div>
                 </div>
-                <div class="deployment">
-                    <div class="deployment-flag">&#129312;</div>
-                    <h4>The StatePageTX</h4>
-                    <div class="deployment-meta">Texas Deployment</div>
-                    <p>English-language statewide political and government news for Texas. Targets political staffers, lobbyists, journalists, and policy professionals. RSS feeds curated for political balance. Section structure deliberately narrowed to create a defensible niche against established Texas outlets. Government agenda strip with session/interim flex logic for the biennial Texas Legislature.</p>
-                    <a href="https://tx.thestatepage.com" target="_blank" rel="noopener">tx.thestatepage.com &rarr;</a>
-                </div>
-                <div class="deployment">
-                    <div class="deployment-flag">&#127474;&#127485;</div>
-                    <h4>La Portada MX</h4>
-                    <div class="deployment-meta">Mexico Federal</div>
-                    <p>Spanish-language federal political news for Mexico. First non-PR Latin American market and the schema pressure test for the multi-tenant architecture. Eleven curated outlets across legacy, investigative, and digital-native Mexican political media. Categorization handles the 2024 judicial reform by treating SCJN coverage as a standalone category.</p>
-                    <a href="https://laportadamx.com" target="_blank" rel="noopener">laportadamx.com &rarr;</a>
+                <div class="deployment-family">
+                    <h4>The EnglandPage</h4>
+                    <div class="deployment-family-meta">English &nbsp;&middot;&nbsp; Country-level standalone &nbsp;&middot;&nbsp; 1 market</div>
+                    <div class="market-list">
+                        <a class="market-chip" href="https://theenglandpage.com" target="_blank" rel="noopener"><span class="market-chip-flag">&#127988;&#917607;&#917602;&#917605;&#917614;&#917607;&#917631;</span> The EnglandPage</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-meta"><span>Next.js 14</span><span>Gemini 2.5 Flash</span><span>Editorial Prompt Architecture</span><span>Vercel Pro</span><span>Cloudflare</span><span>Multi-Tenant Architecture</span></div>
+            <div class="project-meta"><span>Next.js 14</span><span>Gemini 2.5 Flash Lite</span><span>Rule-Based Categorizer</span><span>Editorial Prompt Architecture</span><span>Vercel Pro</span><span>Cloudflare</span><span>Multi-Tenant Architecture</span><span>353 Vitest Tests</span></div>
             <a class="project-link" href="https://github.com/plpk/portada-engine" target="_blank" rel="noopener">View Repository &rarr;</a>
         </div>
 
@@ -198,7 +208,7 @@
     <div class="section-label">Experience</div>
     <h2>Where compliance discipline meets shipped&nbsp;systems.</h2>
     <div class="exp-list">
-        <div class="exp-item"><div class="exp-date">2024 to Present</div><div class="exp-content"><h3>Context Engineer</h3><div class="exp-org">Self-Employed, San Juan, PR</div><p>Conceived, designed, and launched portada-engine, a config-driven multi-tenant civic news platform with four live markets across two languages and two brand families. Wrote the editorial prompt architecture for each market. Published Purese to the Apple App Store. Designed the TierCheckMedia context engineering system. Set up a Playwright E2E test suite against a production website. Currently studying agent architectures (LangChain / LangGraph) and deepening Python fundamentals through a real project.</p></div></div>
+        <div class="exp-item"><div class="exp-date">2024 to Present</div><div class="exp-content"><h3>Context Engineer</h3><div class="exp-org">Self-Employed, San Juan, PR</div><p>Conceived, designed, and launched portada-engine, a config-driven multi-tenant civic news platform with 11 live markets across two languages and three brand families. Wrote the editorial prompt architecture for each market. Published Purese to the Apple App Store. Designed the TierCheckMedia context engineering system. Set up a Playwright E2E test suite against a production website. Currently studying agent architectures (LangChain / LangGraph) and deepening Python fundamentals through a real project.</p></div></div>
         <div class="exp-item"><div class="exp-date">2023 to 2024</div><div class="exp-content"><h3>Deputy Project Manager, EHP Compliance</h3><div class="exp-org">IEM International, Guaynabo, PR</div><p>Hired as Disaster Recovery Specialist II, then tapped to scope and launch a new Environmental Planning and Historic Preservation compliance program for a major Puerto Rico electric utility's recovery from Hurricanes Maria and Fiona. Authored the foundational scope of work that became a $21 million, 38-month FEMA work order covering 16,000+ miles of transmission lines. Promoted to Deputy Project Manager. Led a 21-person cross-functional team. Directed the subcontractor relationship with the leading EHP engineering firm in Puerto Rico. Compliance across 1,200+ disaster recovery projects under NEPA, ESA, CWA, CAA, and NHPA, including 31 vegetation management projects valued at $1.2 billion.</p></div></div>
         <div class="exp-item"><div class="exp-date">2023</div><div class="exp-content"><h3>Oracle Aconex Specialist</h3><div class="exp-org">Eniac Corporation, Guaynabo, PR</div><p>Forward-deployed technology specialist embedded in a major electric utility's PMO and QA/QC department. Implemented Oracle Aconex company-wide. Managed 500+ software licenses across the client's company-wide deployment. Configured custom workflows and adapted the platform for environmental compliance reporting. Oracle Aconex Accredited Specialist. Also served as Microsoft 365 administrator for Eniac's internal office while deployed at the client site.</p></div></div>
         <div class="exp-item"><div class="exp-date">2021 to 2022</div><div class="exp-content"><h3>Teaching Assistant, Technology Department</h3><div class="exp-org">Escuela Secundaria, Universidad de Puerto Rico</div><p>Programming instruction in Python, HTML, Scratch, and VEXcode VR robotics at UPR's laboratory high school. Lab IT, hardware management, and software deployment across 25+ desktops. Faculty mentor for the student Computer Club. Subsequently served as DECEP Course Instructor delivering STEM certification to 60+ public school teachers.</p></div></div>
