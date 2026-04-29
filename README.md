@@ -16,7 +16,7 @@ Career changer with six production AI products shipped since August 2024. Select
 
 🎯 **[Playwright Test Suite](https://github.com/plpk/ffxiah-playwright-tests)**. Automated end-to-end tests against a production website (ffxiah.com) with a 20+ year user base.
 
-🤖 **TierCheckMedia**. Context engineering system for AI-driven short-form video production. 80,000+ views and 8.4% engagement rate (2x industry average) in its first 15 days. Channels currently hibernated.
+🤖 **[TierCheckMedia](https://github.com/plpk/TierCheckMedia)**. Context engineering system for AI-driven short-form video production. 80,000+ views and 8.4% engagement rate (2x industry average) in its first 15 days. Channels currently hibernated.
 
 ## Currently
 
