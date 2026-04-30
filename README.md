@@ -24,13 +24,6 @@ Career changer with six production AI products shipped since August 2024. Select
 - Growing **Incipit** as a commercial product post-hackathon. Soft launch in progress.
 - Seeking roles in **Context Engineering**, **AI Integration**, **AI Governance**, and **AI Evaluation**.
 
-## Background
-
-- US Army combat veteran, Iraq 2003-2004. Combat Infantryman Badge. Army Commendation Medal for Valor.
-- Deputy Program Manager at IEM International: directed a $21M FEMA compliance program, led a 21-person team across NEPA, ESA, CWA, CAA, and NHPA.
-- Oracle Aconex Specialist at Eniac Corporation: enterprise system implementation for a major electric utility, 500+ licenses, 200+ employees trained.
-- Doctoral Studies in History, University of Puerto Rico (Coursework Completed): archival research across eight countries. Official researcher credential at Archivo General de la Nacion, Lima, Peru.
-- Bilingual: English and Spanish (both native).
 
 ## Contact
 
