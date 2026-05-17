@@ -1,32 +1,31 @@
 # Louis Kunasek
 
-**AI Builder | AI Integration | AI Governance | US Army Combat Veteran**
+**AI Builder | Context Engineering | AI Integration | AI Governance | US Army Combat Veteran**
 
-Career changer with six production AI products shipped since August 2024. Selected for the [Built with Opus 4.7 hackathon](https://cerebralvalley.ai) hosted by Cerebral Valley and Anthropic (500 builders selected from 20,000 applicants). Based in San Juan, PR.
+Career changer with five production AI products shipped since August 2024. Selected for the Built with Opus 4.7 hackathon hosted by Cerebral Valley and Anthropic (500 builders selected from 20,000 applicants, approximately 2.4% acceptance rate). Based in San Juan, PR.
 
 ## Shipped Work
 
-📰 **[nwslyr](https://nwslyr.com)** | [Repo](https://github.com/plpk/nwslyr). AI-curated briefing on artificial intelligence and technology. Four daily editions (morning, lunch, afternoon, evening), 35 free-access sources across four regions. Every headline and deck rewritten to strip clickbait and marketing language. Gemini 2.5 Flash. Astro, Vercel.
+**[portada-engine](https://laportadapr.com)** | [Repo](https://github.com/plpk/portada-engine). Config-driven multi-tenant news platform. 76 live markets across three brand families (La Portada, The StatePage, The EnglandPage) from one repo and one Vercel deployment. Host-based routing, dual-layer briefing cache, headline impact scoring, crisis coverage system with live evidence matching. Seven focus markets with individualized briefing voices, newsletter delivery, and deep source audits. 2,000+ Vitest tests. Drove monthly Gemini spend from $300 to $4.80 at the initial 34-market scale through architectural cost discipline. Next.js, Vercel Pro, Cloudflare, Gemini 2.5 Flash and Flash Lite.
 
-📚 **[Incipit](https://incipit.dev)**. Commercial AI-powered archival research assistant for academic historians. Reads degraded historical scans (microfiche, century-old newsprint, handwritten letters) using Claude Opus 4.7 vision, extracts structured metadata with per-field confidence scoring, and surfaces cross-document connections across multilingual primary source collections. Trust tiers on every extracted field. Research context onboarding shapes all extraction and analysis. Chicago/Turabian citation generation. Demonstrated with real primary sources from my own doctoral research archive across eight Latin American countries. Three pricing tiers (Early Access free, Researcher $20/month annual, Department $65/seat/month annual) with 30% student discount. Originated as a solo entry in the Built with Opus 4.7 hackathon (Cerebral Valley/Anthropic, April 2026), developed into a full commercial product. Next.js, Supabase, Claude API (Opus 4.7), Stripe, Vercel.
+**[nwslyr](https://nwslyr.com)** | [Repo](https://github.com/plpk/nwslyr). AI and technology briefing. Four daily editions, 57 free-access sources, every headline and deck rewritten to strip clickbait and marketing language. Traceable briefing themes showing readers the headlines behind each summary. Email subscriptions via Resend. Crawlable briefing archive. Gemini 2.5 Flash. Astro, Vercel. Runs at $1-3/month in API costs.
 
-🏥 **[MediCita](https://medicita.app)** | [Repo](https://github.com/plpk/medicita). Puerto Rico healthcare specialist directory. 56,469 providers searchable by natural language (Spanish, English, Spanglish). Trust tiers on every displayed fact. Insurance filtering across four PR insurer networks with 30,000+ directory records cross-matched. Geocoding operational. Six automated data pipelines. Next.js, Supabase, Gemini Flash Lite for bounded query parsing.
+**[MediCita](https://medicita.app)** | [Repo](https://github.com/plpk/medicita). Puerto Rico specialist directory. 56,469 providers searchable by natural language (Spanish, English, Spanglish). Trust tiers on every record based on independent source corroboration. Five data pipelines: NPPES federal registry, ORCPS physician license verification, CMS Open Payments, NPPES deactivation checking, and insurer directory cross-matching across six PR networks (Triple-S Commercial, Triple-S Advantage, Triple-S Vital, First Medical Commercial, MMM, Plan de Salud Menonita) with 30,000+ matched records. Surgery-intent search. Next.js, Supabase, Vercel.
 
-📰 **[portada-engine](https://laportadapr.com)** | [Repo](https://github.com/plpk/portada-engine). Config-driven multi-tenant news platform. 76 live markets across three brand families (La Portada in Spanish, The StatePage covering all 50 US states plus DC, Guam, USVI, and a PR diaspora edition in English, Europe with La Portada ES and The EnglandPage). One repo, one Vercel project, host-based routing. Drove monthly Gemini spend from $300 to $4.80/month at the initial 34-market scale through architectural cost discipline; the same architecture now serves all 76 markets. 800+ Vitest tests. Categorization is rule-based with zero AI calls. AI governance guardrails protect every market from a single shared-engine fix.
+**[Incipit](https://incipit.dev)**. Commercial AI research tool for academic historians. Turns fieldwork scans into a persistent, searchable, relationship-aware archive. Claude reads the actual image (not OCR) and extracts structured metadata with per-field confidence scoring. Trust tiers, provenance tracking, standing queries from research notes, cross-document connection surfacing, Chicago/Turabian citation generation. Three pricing tiers with Stripe payments live. Originated from the Built with Opus 4.7 hackathon, developed into a commercial product. Next.js, Supabase, Claude API, Stripe, Vercel.
 
-🌤️ **[Purese](https://apps.apple.com/us/app/purese/id6744907444)**. AI-powered minimalist weather app on the Apple App Store. Integrates Google Gemini 2.5 Flash. Collects zero personal data.
+**[Purese](https://apps.apple.com/us/app/purese/id6744907444)**. AI weather app on the Apple App Store. Google Gemini 2.5 Flash. Collects zero personal data. First shipped AI product (August 2024).
 
-🎯 **[Playwright Test Suite](https://github.com/plpk/ffxiah-playwright-tests)**. Automated end-to-end tests against a production website (ffxiah.com) with a 20+ year user base.
+**[Playwright Test Suite](https://github.com/plpk/ffxiah-playwright-tests)**. Automated end-to-end tests against ffxiah.com, a production website with a 20+ year user base. 11 test areas covering navigation, search, responsive design, error handling, and performance baselines.
 
-🤖 **[TierCheckMedia](https://github.com/plpk/TierCheckMedia)**. Context engineering system for AI-driven short-form video production. 80,000+ views and 8.4% engagement rate (2x industry average) in its first 15 days. Channels currently hibernated.
+**[TierCheckMedia](https://github.com/plpk/TierCheckMedia)**. Context engineering system for AI-driven short-form video production. 80,000+ views and 8.4% engagement rate (2x industry average) in its first 15 days. Channels currently hibernated.
 
 ## Currently
 
-- LangChain Academy complete: Foundation: Introduction to LangChain (Python), Foundation: Introduction to LangGraph (Python), Quickstart: LangChain Essentials (Python).
-- Growing **Incipit** as a commercial product post-hackathon. Soft launch in progress.
-- Seeking roles in **Context Engineering**, **AI Integration**, **AI Governance**, and **AI Evaluation**.
-
+- LangChain Academy complete: Introduction to LangChain (Python), Introduction to LangGraph (Python), LangChain Essentials (Python).
+- Growing Incipit as a commercial product.
+- Seeking roles in Context Engineering, AI Integration, AI Governance, and AI Evaluation.
 
 ## Contact
 
-📫 [Louis.Kunasek@outlook.com](mailto:Louis.Kunasek@outlook.com) · [LinkedIn](https://www.linkedin.com/in/louiskunasek) · [louiskunasek.net](https://louiskunasek.net)
+[Louis.Kunasek@outlook.com](mailto:Louis.Kunasek@outlook.com) · [LinkedIn](https://www.linkedin.com/in/louiskunasek) · [louiskunasek.net](https://louiskunasek.net)
